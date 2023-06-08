@@ -1,23 +1,23 @@
 
-package Controlador.Ventas;
-import Modelos.Ventas.Ventas;
+package Controlador.OrdenDeCompra;
+import Modelos.OrdenDeCompra.OrdenesDeCompra;
 import javax.swing.JOptionPane;
 
-public class ListaVentas {
+public class ListaOrdenDeCompra {
 
-    public NodoVentas lista;
+    public NodoOrdenDeCompra lista;
     private int cantidadNodos;
 
-    public ListaVentas() {
+    public ListaOrdenDeCompra() {
         lista = null;
         cantidadNodos = 0;
     }
 
-    public NodoVentas getLista() {
+    public NodoOrdenDeCompra getLista() {
         return lista;
     }
 
-    public void setLista(NodoVentas lista) {
+    public void setLista(NodoOrdenDeCompra lista) {
         this.lista = lista;
     }
 
@@ -29,12 +29,12 @@ public class ListaVentas {
         this.cantidadNodos = cantidadNodos;
     }
 
-    public void agregarNodo(Ventas v) {
-        NodoVentas nuevo = new NodoVentas(v);
+    public void agregarNodo(OrdenesDeCompra o) {
+        NodoOrdenDeCompra nuevo = new NodoOrdenDeCompra(o);
         if (lista == null) {
             lista = nuevo;
         } else {
-            NodoVentas aux = lista;
+            NodoOrdenDeCompra aux = lista;
             while (aux.getAptSiguiente() != null) {
                 aux = aux.getAptSiguiente();
             }
@@ -43,21 +43,21 @@ public class ListaVentas {
         cantidadNodos++;
     }
 
-    public Ventas[] mostrar() {
-        NodoVentas aux = lista;
-        Ventas[] ventas = new Ventas[cantidadNodos];
+    public OrdenesDeCompra[] mostrar() {
+        NodoOrdenDeCompra aux = lista;
+        OrdenesDeCompra[] ordenesdecompra = new OrdenesDeCompra[cantidadNodos];
         int j = 0;
         int I = 1;
         if (lista == null) {
             JOptionPane.showMessageDialog(null, "lista esta vacia");
         } else {
             while (aux != null) {
-                ventas[j] = aux.getV();
+                ordenesdecompra[j] = aux.getO();
                 aux = aux.getAptSiguiente();
                 j++;
                 I++;
             }
         }
-        return ventas;
+        return ordenesdecompra;
     }
 }

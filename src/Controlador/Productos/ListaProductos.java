@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Controlador.Productos;
 
 import Modelos.Productos.Productos;
 import javax.swing.JOptionPane;
 
-
-/**
- *
- * @author laloh
- */
 public class ListaProductos {
 
     public NodoProductos lista;
