@@ -11,8 +11,6 @@ import Productos.FrmMostrarProducto;
 import Productos.FrmRegistrarProducto;
 import Proveedores.FrmMostrarProveedor;
 import Proveedores.FrmRegistrarProveedor;
-import Proveedores.frmRegistroProveedor;
-import Ventas.FrmMostrarVenta;
 import Ventas.FrmRegistrarVenta;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
@@ -187,8 +185,8 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addGap(28, 28, 28)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3))
