@@ -11,7 +11,7 @@ import Modelos.Productos.Productos;
  * @author laloh
  */
 public class NodoProductos {
-     private NodoProductos aptSiguiente;
+    private NodoProductos aptSiguiente;
     private Productos p;
 
     public NodoProductos(Productos p) {

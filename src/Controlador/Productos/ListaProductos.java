@@ -54,19 +54,19 @@ public class ListaProductos {
 
     public Productos[] mostrar() {
         NodoProductos aux = lista;
-        Productos[] categorias = new Productos[cantidadNodos];
+        Productos[] productos = new Productos[cantidadNodos];
         int j = 0;
         int I = 1;
         if (lista == null) {
             JOptionPane.showMessageDialog(null, "lista esta vacia");
         } else {
             while (aux != null) {
-                categorias[j] = aux.getP();
+                productos[j] = aux.getP();
                 aux = aux.getAptSiguiente();
                 j++;
                 I++;
             }
         }
-        return categorias;
+        return productos;
     }
 }
