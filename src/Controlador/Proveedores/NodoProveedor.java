@@ -1,13 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Controlador.Proveedores;
+
+import Modelos.Proveedor.Proveedores;
 
 /**
  *
  * @author laloh
  */
 public class NodoProveedor {
-    
+    private NodoProveedor aptSiguiente;
+    private Proveedores p;
+
+    public NodoProveedor(Proveedores p) {
+        this.aptSiguiente = null;
+        this.p = p;
+    }
+
+    public NodoProveedor getAptSiguiente() {
+        return aptSiguiente;
+    }
+
+    public void setAptSiguiente(NodoProveedor aptSiguiente) {
+        this.aptSiguiente = aptSiguiente;
+    }
+
+    public Proveedores getP() {
+        return p;
+    }
+
+    public void setP(Proveedores p) {
+        this.p = p;
+    }
 }
