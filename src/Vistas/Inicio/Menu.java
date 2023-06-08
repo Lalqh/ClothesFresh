@@ -1,17 +1,17 @@
 
-package Inicio;
+package Vistas.Inicio;
 
-import Categorias.FrmMostrarCategoria;
-import Categorias.FrmRegistrarCategoria;
-import Empleados.FrmMostrarEmpleado;
-import Empleados.FrmRegistroEmpleado;
-import OrdenDeCompra.FrmMostrarOrdenDeCompra;
-import OrdenDeCompra.FrmRegistrarOrdenDeCompra;
-import Productos.FrmMostrarProducto;
-import Productos.FrmRegistrarProducto;
-import Proveedores.FrmMostrarProveedor;
-import Proveedores.FrmRegistrarProveedor;
-import Ventas.FrmRegistrarVenta;
+import Vistas.Categorias.FrmMostrarCategoria;
+import Vistas.Categorias.FrmRegistrarCategoria;
+import Vistas.Empleados.FrmMostrarEmpleado;
+import Vistas.Empleados.FrmRegistroEmpleado;
+import Vistas.OrdenDeCompra.FrmMostrarOrdenDeCompra;
+import Vistas.OrdenDeCompra.FrmRegistrarOrdenDeCompra;
+import Vistas.Productos.FrmMostrarProducto;
+import Vistas.Productos.FrmRegistrarProducto;
+import Vistas.Proveedores.FrmMostrarProveedor;
+import Vistas.Proveedores.FrmRegistrarProveedor;
+import Vistas.Ventas.FrmRegistrarVenta;
 import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import java.awt.Cursor;

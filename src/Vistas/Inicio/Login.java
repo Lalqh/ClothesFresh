@@ -1,5 +1,5 @@
 
-package Inicio;
+package Vistas.Inicio;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.List;
