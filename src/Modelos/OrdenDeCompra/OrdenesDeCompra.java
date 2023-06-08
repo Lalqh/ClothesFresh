@@ -12,7 +12,7 @@ public class OrdenesDeCompra {
 
     private int idOrdenCompra, cantidadSurtida;
     float montoTotal;
-     private String fechaDeCompra;
+    private String fechaDeCompra;
     private boolean estadoDePago;
 
     public OrdenesDeCompra(int idOrdenCompra, int cantidadSurtida, float montoTotal, String fechaDeCompra, boolean estadoDePago) {
@@ -22,5 +22,47 @@ public class OrdenesDeCompra {
         this.fechaDeCompra = fechaDeCompra;
         this.estadoDePago = estadoDePago;
     }
-   
+
+    public int getIdOrdenCompra() {
+        return idOrdenCompra;
+    }
+
+    public void setIdOrdenCompra(int idOrdenCompra) {
+        this.idOrdenCompra = idOrdenCompra;
+    }
+
+    public int getCantidadSurtida() {
+        return cantidadSurtida;
+    }
+
+    public void setCantidadSurtida(int cantidadSurtida) {
+        this.cantidadSurtida = cantidadSurtida;
+    }
+
+    public float getMontoTotal() {
+        return montoTotal;
+    }
+
+    public void setMontoTotal(float montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+    public String getFechaDeCompra() {
+        return fechaDeCompra;
+    }
+
+    public void setFechaDeCompra(String fechaDeCompra) {
+        this.fechaDeCompra = fechaDeCompra;
+    }
+
+    public boolean isEstadoDePago() {
+        return estadoDePago;
+    }
+
+    public void setEstadoDePago(boolean estadoDePago) {
+        this.estadoDePago = estadoDePago;
+    }
+    
+    
+
 }
