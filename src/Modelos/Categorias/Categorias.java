@@ -9,6 +9,7 @@ public class Categorias {
     private int idCategoria;
     private String nombreCategoria, descripcion, fechaCreacion;
     private boolean activo;
+    
 
     public Categorias(int idCategoria, String nombreCategoria, String descripcion, String fechaCreacion, boolean activo) {
         this.idCategoria = idCategoria;

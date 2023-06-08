@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Empleados/Empleados.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Categorias/Categorias.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Proveedor/Proveedores.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Productos/Productos.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/OrdenDeCompra/OrdenesDeCompra.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Ventas/Ventas.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Productos/FrmMostrarProducto.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Productos/ListaProductos.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Categorias/ListaCategorias.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Proveedores/ListaProveedores.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Ventas/NodoVentas.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Proveedores/NodoProveedor.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Ventas/ListaVentas.java</file>
         </group>
     </open-files>
 </project-private>
