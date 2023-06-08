@@ -1,3 +1,7 @@
 # ClothesFresh
-Aqui puro cvv
-# y a el angel le gusta el pito
+Project Programacion Orientada a Eventos
+# Team
+Angel Emanuel Mendoza Reyes 
+Eduardo Alejandro Cotero Avila
+Axel David Flores Bajonero
+Brayan Josue Guardado Amezola
