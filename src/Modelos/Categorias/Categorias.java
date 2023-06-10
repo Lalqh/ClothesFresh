@@ -1,15 +1,13 @@
 
 package Modelos.Categorias;
 
-/**
- *
- * @author laloh
- */
+import Controlador.Categorias.ListaCategorias;
+import Controlador.Categorias.NodoCategorias;
+
 public class Categorias {
-    private int idCategoria;
+    public int idCategoria = 0;
     private String nombreCategoria, descripcion, fechaCreacion;
-    private boolean activo;
-    
+    private boolean activo; 
 
     public Categorias(int idCategoria, String nombreCategoria, String descripcion, String fechaCreacion, boolean activo) {
         this.idCategoria = idCategoria;
@@ -18,13 +16,9 @@ public class Categorias {
         this.fechaCreacion = fechaCreacion;
         this.activo = activo;
     }
-
+    
     public int getIdCategoria() {
         return idCategoria;
-    }
-
-    public void setIdCategoria(int idCategoria) {
-        this.idCategoria = idCategoria;
     }
 
     public String getNombreCategoria() {
@@ -58,4 +52,5 @@ public class Categorias {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
+    
 }

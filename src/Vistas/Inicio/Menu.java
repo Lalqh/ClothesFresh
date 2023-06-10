@@ -1,6 +1,6 @@
-
 package Vistas.Inicio;
 
+import Controlador.Categorias.ListaCategorias;
 import Vistas.Categorias.FrmMostrarCategoria;
 import Vistas.Categorias.FrmRegistrarCategoria;
 import Vistas.Empleados.FrmMostrarEmpleado;
@@ -18,54 +18,58 @@ import java.awt.Cursor;
 import java.awt.Point;
 
 public class Menu extends javax.swing.JFrame {
+
+    ListaCategorias listaC = new ListaCategorias();
+    
     public Menu() {
-        initComponents(); 
-         setIconImage(new ImageIcon(getClass().getResource("/img/64px.png")).getImage());
+        initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/img/64px.png")).getImage());
         setLocationRelativeTo(null);
-        
-    ImageIcon empleaIcon = new ImageIcon("src/img/Empleados.png");
-    Cursor c;
-    Toolkit tk = Toolkit.getDefaultToolkit();
-    c = tk.createCustomCursor(empleaIcon.getImage(),new Point(1,1) , null);
-    setCursor(c);
-    Empleados.setCursor(c);
-    
-    ImageIcon cateIcon = new ImageIcon("src/img/Categorias.png");
-    Cursor c1;
-    Toolkit tk1 = Toolkit.getDefaultToolkit();
-    c1 = tk1.createCustomCursor(cateIcon.getImage(),new Point(1,1) , null);
-    setCursor(c1);
-    Categorias.setCursor(c1);
-    
-    ImageIcon produIcon = new ImageIcon("src/img/Productos.png");
-    Cursor c2;
-    Toolkit tk2 = Toolkit.getDefaultToolkit();
-    c2 = tk2.createCustomCursor(produIcon.getImage(),new Point(1,1) , null);
-    setCursor(c2);
-    Productos.setCursor(c2);
-    
-    ImageIcon ordenIcon = new ImageIcon("src/img/OrdenesCompra.png");
-    Cursor c3;
-    Toolkit tk3 = Toolkit.getDefaultToolkit();
-    c3 = tk3.createCustomCursor(ordenIcon.getImage(),new Point(1,1) , null);
-    setCursor(c3);
-    OrdenesdeCompra.setCursor(c3);
-    
-    ImageIcon proveeIcon = new ImageIcon("src/img/Proveedores.png");
-    Cursor c4;
-    Toolkit tk4 = Toolkit.getDefaultToolkit();
-    c4 = tk4.createCustomCursor(proveeIcon.getImage(),new Point(1,1) , null);
-    setCursor(c4);
-    Proveedores.setCursor(c4);
-    
-    ImageIcon ventaIcon = new ImageIcon("src/img/Ventas.png");
-    Cursor c5;
-    Toolkit tk5 = Toolkit.getDefaultToolkit();
-    c5 = tk5.createCustomCursor(ventaIcon.getImage(),new Point(1,1) , null);
-    setCursor(c5);
-    Ventas.setCursor(c5);
-    
+
+        ImageIcon empleaIcon = new ImageIcon("src/img/Empleados.png");
+        Cursor c;
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        c = tk.createCustomCursor(empleaIcon.getImage(), new Point(1, 1), null);
+        setCursor(c);
+        Empleados.setCursor(c);
+
+        ImageIcon cateIcon = new ImageIcon("src/img/Categorias.png");
+        Cursor c1;
+        Toolkit tk1 = Toolkit.getDefaultToolkit();
+        c1 = tk1.createCustomCursor(cateIcon.getImage(), new Point(1, 1), null);
+        setCursor(c1);
+        Categorias.setCursor(c1);
+
+        ImageIcon produIcon = new ImageIcon("src/img/Productos.png");
+        Cursor c2;
+        Toolkit tk2 = Toolkit.getDefaultToolkit();
+        c2 = tk2.createCustomCursor(produIcon.getImage(), new Point(1, 1), null);
+        setCursor(c2);
+        Productos.setCursor(c2);
+
+        ImageIcon ordenIcon = new ImageIcon("src/img/OrdenesCompra.png");
+        Cursor c3;
+        Toolkit tk3 = Toolkit.getDefaultToolkit();
+        c3 = tk3.createCustomCursor(ordenIcon.getImage(), new Point(1, 1), null);
+        setCursor(c3);
+        OrdenesdeCompra.setCursor(c3);
+
+        ImageIcon proveeIcon = new ImageIcon("src/img/Proveedores.png");
+        Cursor c4;
+        Toolkit tk4 = Toolkit.getDefaultToolkit();
+        c4 = tk4.createCustomCursor(proveeIcon.getImage(), new Point(1, 1), null);
+        setCursor(c4);
+        Proveedores.setCursor(c4);
+
+        ImageIcon ventaIcon = new ImageIcon("src/img/Ventas.png");
+        Cursor c5;
+        Toolkit tk5 = Toolkit.getDefaultToolkit();
+        c5 = tk5.createCustomCursor(ventaIcon.getImage(), new Point(1, 1), null);
+        setCursor(c5);
+        Ventas.setCursor(c5);
+
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -368,69 +372,69 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-    FrmRegistroEmpleado empleado = new FrmRegistroEmpleado();
-    Menu.add(empleado);
-    empleado.show();
+        FrmRegistroEmpleado empleado = new FrmRegistroEmpleado();
+        Menu.add(empleado);
+        empleado.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-    FrmMostrarEmpleado empleado = new FrmMostrarEmpleado();
-    Menu.add(empleado);
-    empleado.show();
+        FrmMostrarEmpleado empleado = new FrmMostrarEmpleado();
+        Menu.add(empleado);
+        empleado.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-     FrmRegistrarCategoria categoria = new FrmRegistrarCategoria();
-     Menu.add(categoria);
-     categoria.show();
+        FrmRegistrarCategoria categoria = new FrmRegistrarCategoria(listaC);
+        Menu.add(categoria);
+        categoria.show();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-     FrmMostrarCategoria categoria = new FrmMostrarCategoria();
-     Menu.add(categoria);
-     categoria.show();
+        FrmMostrarCategoria categoria = new FrmMostrarCategoria(listaC);
+        Menu.add(categoria);
+        categoria.show();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-     FrmRegistrarOrdenDeCompra ordenDeCompra = new FrmRegistrarOrdenDeCompra();
-     Menu.add(ordenDeCompra);
-     ordenDeCompra.show();
+        FrmRegistrarOrdenDeCompra ordenDeCompra = new FrmRegistrarOrdenDeCompra();
+        Menu.add(ordenDeCompra);
+        ordenDeCompra.show();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-    FrmMostrarOrdenDeCompra ordenDeCompra = new FrmMostrarOrdenDeCompra();
-    Menu.add(ordenDeCompra);
-    ordenDeCompra.show();
+        FrmMostrarOrdenDeCompra ordenDeCompra = new FrmMostrarOrdenDeCompra();
+        Menu.add(ordenDeCompra);
+        ordenDeCompra.show();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-    FrmRegistrarProducto producto = new FrmRegistrarProducto();
-    Menu.add(producto);
-    producto.show();
+        FrmRegistrarProducto producto = new FrmRegistrarProducto();
+        Menu.add(producto);
+        producto.show();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-    FrmMostrarProducto producto = new FrmMostrarProducto();
-    Menu.add(producto);
-    producto.show();
+        FrmMostrarProducto producto = new FrmMostrarProducto();
+        Menu.add(producto);
+        producto.show();
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-    FrmRegistrarProveedor proveedor = new FrmRegistrarProveedor();
-    Menu.add(proveedor);
-    proveedor.show();
+        FrmRegistrarProveedor proveedor = new FrmRegistrarProveedor();
+        Menu.add(proveedor);
+        proveedor.show();
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
-    FrmMostrarProveedor proveedor = new FrmMostrarProveedor();
-    Menu.add(proveedor);
-    proveedor.show();
+        FrmMostrarProveedor proveedor = new FrmMostrarProveedor();
+        Menu.add(proveedor);
+        proveedor.show();
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-     FrmRegistrarVenta venta = new FrmRegistrarVenta();
-     Menu.add(venta);
-     venta.show();
+        FrmRegistrarVenta venta = new FrmRegistrarVenta();
+        Menu.add(venta);
+        venta.show();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

@@ -6,10 +6,7 @@ package Controlador.Categorias;
 
 import Modelos.Categorias.Categorias;
 
-/**
- *
- * @author laloh
- */
+
 public class NodoCategorias {
     private NodoCategorias aptSiguiente;
     private Categorias c;
