@@ -1,15 +1,11 @@
 
 package Modelos.Proveedor;
 
-/**
- *
- * @author laloh
- */
 public class Proveedores {
     private int idProveedor, numeroProveedor;
     private String nombreProveedor, rfcProveedor, correoProveedor;
 
-    public Proveedores(int idProveedor, int numeroProveedor, String nombreProveedor, String rfcProveedor, String correoProveedor) {
+    public Proveedores(String nombreProveedor, String rfcProveedor, String correoProveedor, int idProveedor, int numeroProveedor) {
         this.idProveedor = idProveedor;
         this.numeroProveedor = numeroProveedor;
         this.nombreProveedor = nombreProveedor;
@@ -56,7 +52,5 @@ public class Proveedores {
     public void setCorreoProveedor(String correoProveedor) {
         this.correoProveedor = correoProveedor;
     }
-    
-    
-    
+ 
 }

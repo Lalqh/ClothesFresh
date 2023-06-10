@@ -4,17 +4,17 @@
  */
 package Vistas.Proveedores;
 
+import Controlador.Proveedores.ListaProveedores;
+
 /**
  *
  * @author DELL
  */
 public class FrmMostrarProveedor extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form FrmMostrarProveedor
-     */
-    public FrmMostrarProveedor() {
+    public FrmMostrarProveedor(ListaProveedores lista) {
         initComponents();
+        lista.mostrarElementosCategoria(jTable2, lista);
     }
 
     /**

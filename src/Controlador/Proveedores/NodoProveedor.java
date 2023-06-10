@@ -3,10 +3,7 @@ package Controlador.Proveedores;
 
 import Modelos.Proveedor.Proveedores;
 
-/**
- *
- * @author laloh
- */
+
 public class NodoProveedor {
     private NodoProveedor aptSiguiente;
     private Proveedores p;
