@@ -1,6 +1,5 @@
 package Controlador.Empleados;
 
-import Controlador.Categorias.NodoCategorias;
 import Modelos.Empleados.Empleados;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -43,18 +42,18 @@ public class ColaEmpleado {
             mainTable.setColumnIdentifiers(cabecera);
             tabla.setModel(mainTable);
 
-            Object[] datosCategoria = new Object[5];
+            Object[] datosEmpleado = new Object[5];
 
             while (aux != null) {
-                datosCategoria[0] = aux.getE().getID();
-                datosCategoria[1] = aux.getE().getUsuarioEmpleado();
-                datosCategoria[2] = aux.getE().get();
-                datosCategoria[3] = aux.getC().getFechaCreacion();
+                datosEmpleado[0] = aux.getE().getID();
+                datosEmpleado[1] = aux.getE().getUsuarioEmpleado();
+                datosEmpleado[2] = aux.getE().getNombreEmpleado();
+                datosEmpleado[3] = aux.getE().getApellidoPaterno();
+                datosEmpleado[3] = aux.getE().getApellidoPaterno();
                 aux = aux.getAptSiguiente();
-                mainTable.addRow(datosCategoria);
+                mainTable.addRow(datosEmpleado);
             }
             tabla.setModel(mainTable);
         }
     }
-
 }
