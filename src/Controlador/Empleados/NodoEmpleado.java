@@ -34,6 +34,4 @@ public class NodoEmpleado {
     public void setE(Empleados e) {
         this.e = e;
     }
-    
-    
 }
