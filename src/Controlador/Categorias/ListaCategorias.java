@@ -42,21 +42,25 @@ public class ListaCategorias {
 
     public void mostrarElementosCategoria(JTable tabla, ListaCategorias listaL) {
         NodoCategorias aux = listaL.lista;
+        
         if (listaL.lista == null) {
             JOptionPane.showMessageDialog(null, "Lista de categorias vacia.");
         } else {
             DefaultTableModel mainTable = new DefaultTableModel();
-            String cabecera[] = {"ID", "Nombre", "Descripcion", "Fecha registro"};
+            String cabecera[] = {"ID", "Nombre", "Descripcion", "Fecha registro","Estado"};
             mainTable.setColumnIdentifiers(cabecera);
             tabla.setModel(mainTable);
 
-            Object[] datosCategoria = new Object[4];
+            Object[] datosCategoria = new Object[5];
 
             while (aux != null) {
+                String mensaje = (aux.getC().isActivo()) ? "Activo" : "No Activo";
+                
                 datosCategoria[0] = aux.getC().getIdCategoria();
                 datosCategoria[1] = aux.getC().getNombreCategoria();
                 datosCategoria[2] = aux.getC().getDescripcion();
                 datosCategoria[3] = aux.getC().getFechaCreacion();
+                datosCategoria[4] = mensaje;
                 aux = aux.getAptSiguiente();
                 mainTable.addRow(datosCategoria);
             }
