@@ -11,16 +11,18 @@ package Modelos.Productos;
 public class Productos {
 
     private int stockProducto;
+    private int id;
     private float precio;
-    private String folioProducto, nombreProducto, descripcion, talla;
+    private String nombreProducto, descripcion, talla, categoria;
 
-    public Productos(int stockProducto, float precio, String folioProducto, String nombreProducto, String descripcion, String talla) {
+    public Productos(int stockProducto, int id, float precio, String nombreProducto, String descripcion, String talla, String categoria) {
         this.stockProducto = stockProducto;
+        this.id = id;
         this.precio = precio;
-        this.folioProducto = folioProducto;
         this.nombreProducto = nombreProducto;
         this.descripcion = descripcion;
         this.talla = talla;
+        this.categoria = categoria;
     }
 
     public int getStockProducto() {
@@ -31,20 +33,20 @@ public class Productos {
         this.stockProducto = stockProducto;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public float getPrecio() {
         return precio;
     }
 
     public void setPrecio(float precio) {
         this.precio = precio;
-    }
-
-    public String getFolioProducto() {
-        return folioProducto;
-    }
-
-    public void setFolioProducto(String folioProducto) {
-        this.folioProducto = folioProducto;
     }
 
     public String getNombreProducto() {
@@ -70,6 +72,12 @@ public class Productos {
     public void setTalla(String talla) {
         this.talla = talla;
     }
-    
-    
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 }
