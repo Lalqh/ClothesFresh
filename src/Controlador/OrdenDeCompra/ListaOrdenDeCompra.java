@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 public class ListaOrdenDeCompra {
 
     public NodoOrdenDeCompra lista;
-   public int auxCounter = 1;
+   public int auxCounter = 3;
 
     public ListaOrdenDeCompra() {
         lista = null;

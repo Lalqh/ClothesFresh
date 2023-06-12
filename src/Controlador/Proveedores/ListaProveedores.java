@@ -14,7 +14,7 @@ public class ListaProveedores {
 
   
     public NodoProveedor lista;
-    public int auxCounter = 1;
+    public int auxCounter = 3;
 
     public ListaProveedores() {
         lista = null;

@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
 public class ListaCategorias {
 
     public NodoCategorias lista;
-    public int auxCounter = 1;
+    public int auxCounter = 3;
 
     public ListaCategorias() {
         lista = null;

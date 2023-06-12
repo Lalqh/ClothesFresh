@@ -128,8 +128,8 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     public void ingresar() {
-        String usuario = "Chavirra23";
-        String contra = "12345";
+        String usuario = "admin";
+        String contra = "clothesfresh";
         
         String inputUsuario = jTfUsuario.getText();
         String inputPassword = jTfContrasena.getText();

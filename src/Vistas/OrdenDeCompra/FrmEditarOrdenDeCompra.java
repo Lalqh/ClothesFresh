@@ -385,11 +385,20 @@ public class FrmEditarOrdenDeCompra extends javax.swing.JInternalFrame {
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel18.setText("Proveedor");
 
-        cbProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beto", "Item 2", "Item 3", "Item 4" }));
+        cbProveedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbProveedorActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 255, 255));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Editar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         btnSalir2.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -510,7 +519,19 @@ public class FrmEditarOrdenDeCompra extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jcEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcEstadoActionPerformed
-        int CantS=Integer.parseInt(txCant.getText());
+       
+    }//GEN-LAST:event_jcEstadoActionPerformed
+
+    private void btnSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir2ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalir2ActionPerformed
+
+    private void txCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txCantActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txCantActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+       int CantS=Integer.parseInt(txCant.getText());
         String fecha=(txFecha.getText());
         float monto=Float.parseFloat(txMonto.getText());
         boolean estado=false;
@@ -530,15 +551,11 @@ public class FrmEditarOrdenDeCompra extends javax.swing.JInternalFrame {
             txMonto.setText("");
             jcEstado.setSelected(false);
         }
-    }//GEN-LAST:event_jcEstadoActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void btnSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir2ActionPerformed
-        this.dispose();
-    }//GEN-LAST:event_btnSalir2ActionPerformed
-
-    private void txCantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txCantActionPerformed
+    private void cbProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbProveedorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txCantActionPerformed
+    }//GEN-LAST:event_cbProveedorActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

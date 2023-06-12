@@ -5,6 +5,11 @@ import Controlador.Empleados.ColaEmpleado;
 import Controlador.OrdenDeCompra.ListaOrdenDeCompra;
 import Controlador.Productos.ListaProductos;
 import Controlador.Proveedores.ListaProveedores;
+import Modelos.Categorias.Categorias;
+import Modelos.Empleados.Empleados;
+import Modelos.OrdenDeCompra.OrdenesDeCompra;
+import Modelos.Productos.Productos;
+import Modelos.Proveedor.Proveedores;
 import Vistas.Categorias.FrmMostrarCategoria;
 import Vistas.Categorias.FrmRegistrarCategoria;
 import Vistas.Empleados.FrmMostrarEmpleado;
@@ -77,7 +82,25 @@ public class Menu extends javax.swing.JFrame {
         c5 = tk5.createCustomCursor(ventaIcon.getImage(), new Point(1, 1), null);
         setCursor(c5);
         Ventas.setCursor(c5);
-
+        
+        //valores predeterminados
+        //Categorias
+        listaC.agregarNodo(new Categorias(1, "Deportivo", "Ropa para deportes", "12/06/2023", true));
+        listaC.agregarNodo(new Categorias(2, "Inverno", "Ropa de invierno ", "12/06/2023", false));
+        //Productos
+        listaProductos.agregarNodo(new Productos(1, 1, 500, "Playera", "Ropa para deportes", "Mediana", "Deportivo"));
+        listaProductos.agregarNodo(new Productos(2, 2, 1500, "Chaqueta", "Ropa de invierno", "Grande", "Invierno"));
+        
+        //Proveedores
+        listaP.agregarNodo(new Proveedores(1, "Andres", "ANDI23456", "andresclothes@gmail.com", "3334818634"));
+        listaP.agregarNodo(new Proveedores(2, "Samuel", "SAMS126467", "samuelmau@ceti.mx", "3325463834"));
+        //Orden de Compra
+        listaO.agregarNodo(new OrdenesDeCompra(1, 5, 2500, "13/06/2023","Andres", true));
+        listaO.agregarNodo(new OrdenesDeCompra(2, 10, 5000, "14/06/2023", "Samuel", false));
+        
+        //Empleados
+        colaE.encolar(new Empleados("Brayan", "Guardado", "Amezola", "BrayanClothes", "Brayan123", 1));
+        colaE.encolar(new Empleados("Eduardo", "Cotero", "Avila", "LaloClothes", "Lalo123", 2));
     }
 
     @SuppressWarnings("unchecked")
@@ -147,13 +170,10 @@ public class Menu extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);

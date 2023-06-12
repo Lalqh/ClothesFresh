@@ -5,14 +5,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author laloh
- */
 public class ColaEmpleado {
 
     public NodoEmpleado cola;
-    public int auxCounter = 0;
+    public int auxCounter = 3;
 
     public ColaEmpleado() {
         cola = null;
