@@ -12,15 +12,26 @@ public class OrdenesDeCompra {
 
     private int idOrdenCompra, cantidadSurtida;
     float montoTotal;
-    private String fechaDeCompra;
+    private String fechaDeCompra,provedor;
     private boolean estadoDePago;
 
-    public OrdenesDeCompra(int idOrdenCompra, int cantidadSurtida, float montoTotal, String fechaDeCompra, boolean estadoDePago) {
+    public OrdenesDeCompra(int idOrdenCompra, int cantidadSurtida, float montoTotal, String fechaDeCompra, String provedor, boolean estadoDePago) {
         this.idOrdenCompra = idOrdenCompra;
         this.cantidadSurtida = cantidadSurtida;
         this.montoTotal = montoTotal;
         this.fechaDeCompra = fechaDeCompra;
+        this.provedor = provedor;
         this.estadoDePago = estadoDePago;
+    }
+
+   
+
+    public String getProvedor() {
+        return provedor;
+    }
+
+    public void setProvedor(String provedor) {
+        this.provedor = provedor;
     }
 
     public int getIdOrdenCompra() {

@@ -25,6 +25,7 @@ private ListaProveedores listaP;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnSalir4 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -37,6 +38,16 @@ private ListaProveedores listaP;
         jLabel12 = new javax.swing.JLabel();
         tfNoTelefono = new javax.swing.JTextField();
         btnRegistrar = new javax.swing.JButton();
+        btnSalir5 = new javax.swing.JButton();
+
+        btnSalir4.setBackground(new java.awt.Color(255, 255, 204));
+        btnSalir4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSalir4.setText("Regresar");
+        btnSalir4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalir4ActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -61,6 +72,15 @@ private ListaProveedores listaP;
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
+            }
+        });
+
+        btnSalir5.setBackground(new java.awt.Color(255, 255, 204));
+        btnSalir5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnSalir5.setText("Regresar");
+        btnSalir5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalir5ActionPerformed(evt);
             }
         });
 
@@ -96,7 +116,9 @@ private ListaProveedores listaP;
                         .addComponent(jLabel12))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSalir5, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -124,7 +146,9 @@ private ListaProveedores listaP;
                 .addComponent(tfNoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
                 .addComponent(btnRegistrar)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSalir5)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -162,10 +186,24 @@ private ListaProveedores listaP;
         }
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
+    private void btnSalir4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir4ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalir4ActionPerformed
+
+    private void btnSalir5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir5ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSalir5ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Nombre;
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JButton btnSalir1;
+    private javax.swing.JButton btnSalir2;
+    private javax.swing.JButton btnSalir3;
+    private javax.swing.JButton btnSalir4;
+    private javax.swing.JButton btnSalir5;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel7;

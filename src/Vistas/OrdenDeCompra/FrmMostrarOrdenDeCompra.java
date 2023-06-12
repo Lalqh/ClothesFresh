@@ -4,17 +4,26 @@
  */
 package Vistas.OrdenDeCompra;
 
+import Controlador.OrdenDeCompra.ListaOrdenDeCompra;
+import Controlador.Proveedores.ListaProveedores;
+import Modelos.OrdenDeCompra.OrdenesDeCompra;
+import Vistas.Productos.FrmEditarProducto;
+import javax.swing.JOptionPane;
+import static Vistas.Inicio.Menu.Menu;
 /**
  *
  * @author DELL
  */
 public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form FrmMostrarOrdenDeCompra
-     */
-    public FrmMostrarOrdenDeCompra() {
+    ListaOrdenDeCompra listaO;
+    ListaProveedores listaP;
+    public FrmMostrarOrdenDeCompra( ListaOrdenDeCompra listaO,ListaProveedores listaP) {
         initComponents();
+        this.listaO=listaO;
+        this.listaP=listaP;
+        listaO.mostrarElementosOrdenC(jTable1, listaO);
+        
     }
 
     /**
@@ -31,7 +40,9 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        btnSalir1 = new javax.swing.JButton();
+        editar = new javax.swing.JButton();
+        actualizar = new javax.swing.JButton();
+        eliminar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -45,39 +56,66 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        btnSalir1.setBackground(new java.awt.Color(255, 255, 204));
-        btnSalir1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btnSalir1.setText("Regresar");
+        editar.setBackground(new java.awt.Color(204, 255, 255));
+        editar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        editar.setText("Editar ");
+        editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarActionPerformed(evt);
+            }
+        });
+
+        actualizar.setBackground(new java.awt.Color(204, 255, 204));
+        actualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        actualizar.setText("Actualizar datos");
+        actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizarActionPerformed(evt);
+            }
+        });
+
+        eliminar.setBackground(new java.awt.Color(255, 255, 204));
+        eliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        eliminar.setText("Eliminar");
+        eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eliminarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(112, 112, 112)
+                                .addComponent(jLabel1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(editar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(actualizar)
+                                .addGap(12, 12, 12)
+                                .addComponent(eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(btnSalir1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 101, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(112, 112, 112)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,9 +125,12 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(btnSalir1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(actualizar)
+                    .addComponent(eliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -107,9 +148,29 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarActionPerformed
+        int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el ID de la orden a editar"));
+        OrdenesDeCompra ordenActual = listaO.buscarNodo(id);
+
+        FrmEditarOrdenDeCompra orden = new FrmEditarOrdenDeCompra(listaO, listaP, ordenActual.getIdOrdenCompra(), ordenActual);
+        Menu.add(orden);
+        orden.show();
+    }//GEN-LAST:event_editarActionPerformed
+
+    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+        listaO.mostrarElementosOrdenC(jTable1, listaO);
+    }//GEN-LAST:event_actualizarActionPerformed
+
+    private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed
+        int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el ID de la orden a eliminar"));
+        listaO.eliminarNodo(id);
+    }//GEN-LAST:event_eliminarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSalir1;
+    private javax.swing.JButton actualizar;
+    private javax.swing.JButton editar;
+    private javax.swing.JButton eliminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

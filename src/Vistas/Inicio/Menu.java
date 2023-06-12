@@ -2,6 +2,7 @@ package Vistas.Inicio;
 
 import Controlador.Categorias.ListaCategorias;
 import Controlador.Empleados.ColaEmpleado;
+import Controlador.OrdenDeCompra.ListaOrdenDeCompra;
 import Controlador.Productos.ListaProductos;
 import Controlador.Proveedores.ListaProveedores;
 import Vistas.Categorias.FrmMostrarCategoria;
@@ -26,6 +27,7 @@ public class Menu extends javax.swing.JFrame {
     ListaCategorias listaC = new ListaCategorias();
     ListaProveedores listaP = new ListaProveedores();
     ListaProductos listaProductos = new ListaProductos();
+    ListaOrdenDeCompra listaO = new ListaOrdenDeCompra();
     ColaEmpleado colaE = new ColaEmpleado();
     
     public Menu() {
@@ -403,13 +405,13 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        FrmRegistrarOrdenDeCompra ordenDeCompra = new FrmRegistrarOrdenDeCompra();
+        FrmRegistrarOrdenDeCompra ordenDeCompra = new FrmRegistrarOrdenDeCompra(listaO,listaP);
         Menu.add(ordenDeCompra);
         ordenDeCompra.show();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        FrmMostrarOrdenDeCompra ordenDeCompra = new FrmMostrarOrdenDeCompra();
+        FrmMostrarOrdenDeCompra ordenDeCompra = new FrmMostrarOrdenDeCompra(listaO,listaP);
         Menu.add(ordenDeCompra);
         ordenDeCompra.show();
     }//GEN-LAST:event_jMenuItem8ActionPerformed
