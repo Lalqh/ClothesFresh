@@ -4,6 +4,8 @@
  */
 package Vistas.Productos;
 
+import Controlador.Productos.ListaProductos;
+
 /**
  *
  * @author DELL
@@ -13,8 +15,11 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
     /**
      * Creates new form FrmMostrarProducto
      */
-    public FrmMostrarProducto() {
+    private ListaProductos listaP;
+    public FrmMostrarProducto(ListaProductos listaP) {
         initComponents();
+        this.listaP = listaP;
+        listaP.mostrarElementosProductos(JTProductos, listaP);
     }
 
     /**
@@ -30,7 +35,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        JTProductos = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
@@ -44,18 +49,15 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Productos actualmente activos");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        JTProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(JTProductos);
 
         jButton1.setBackground(new java.awt.Color(204, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -119,12 +121,12 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable JTProductos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

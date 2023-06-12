@@ -194,9 +194,12 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
         String inputNombreCategoria = tFNombreCategoria.getText();
         String inputDescripcion = tADescripcion.getText();
         String inputFechaRegistro = tFechaRegistro.getText();
-        boolean inputValidacion = (cBActivar.isSelected()) ? true : false; 
+        boolean inputValidacion = false;
+        if(cBActivar.isSelected()) {
+            inputValidacion = true;
+        } 
         
-        if(inputNombreCategoria.equalsIgnoreCase("") || inputDescripcion.equals("") || inputFechaRegistro.equals("")) {
+        if(inputNombreCategoria.equals("") || inputDescripcion.equals("") || inputFechaRegistro.equals("")) {
             JOptionPane.showMessageDialog(null,"Todos los campos deben ser llenados");
         } else {
             Categorias categoria = new Categorias(lista.auxCounter, inputNombreCategoria, inputDescripcion, 

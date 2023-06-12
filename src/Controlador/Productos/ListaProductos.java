@@ -1,17 +1,17 @@
-
 package Controlador.Productos;
 
 import Modelos.Productos.Productos;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class ListaProductos {
 
     public NodoProductos lista;
-    private int cantidadNodos;
+    public int auxCounter = 1;
 
     public ListaProductos() {
         lista = null;
-        cantidadNodos = 0;
     }
 
     public NodoProductos getLista() {
@@ -22,12 +22,12 @@ public class ListaProductos {
         this.lista = lista;
     }
 
-    public int getCantidadNodos() {
-        return cantidadNodos;
+    public int getAuxCounter() {
+        return auxCounter;
     }
 
-    public void setCantidadNodos(int cantidadNodos) {
-        this.cantidadNodos = cantidadNodos;
+    public void setAuxCounter(int auxCounter) {
+        this.auxCounter = auxCounter;
     }
 
     public void agregarNodo(Productos p) {
@@ -41,24 +41,32 @@ public class ListaProductos {
             }
             aux.setAptSiguiente(nuevo);
         }
-        cantidadNodos++;
     }
 
-    public Productos[] mostrar() {
-        NodoProductos aux = lista;
-        Productos[] productos = new Productos[cantidadNodos];
-        int j = 0;
-        int I = 1;
-        if (lista == null) {
-            JOptionPane.showMessageDialog(null, "lista esta vacia");
+    public void mostrarElementosProductos(JTable tabla, ListaProductos listaP) {
+        NodoProductos aux = listaP.lista;
+        if (listaP.lista == null) {
+            JOptionPane.showMessageDialog(null, "Lista de productos vacia.");
         } else {
+            DefaultTableModel mainTable = new DefaultTableModel();
+            String cabecera[] = {"ID", "Nombre", "Descripcion", "Talla", "Categoria", "Stock", "Precio"};
+            mainTable.setColumnIdentifiers(cabecera);
+            tabla.setModel(mainTable);
+
+            Object[] datosProductos = new Object[7];
+
             while (aux != null) {
-                productos[j] = aux.getP();
+                datosProductos[0] = aux.getP().getId();
+                datosProductos[1] = aux.getP().getNombreProducto();
+                datosProductos[2] = aux.getP().getDescripcion();
+                datosProductos[3] = aux.getP().getTalla();
+                datosProductos[4] = aux.getP().getCategoria();
+                datosProductos[5] = aux.getP().getStockProducto();
+                datosProductos[6] = aux.getP().getPrecio();
                 aux = aux.getAptSiguiente();
-                j++;
-                I++;
+                mainTable.addRow(datosProductos);
             }
+            tabla.setModel(mainTable);
         }
-        return productos;
     }
 }

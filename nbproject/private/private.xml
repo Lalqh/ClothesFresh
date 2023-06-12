@@ -2,6 +2,20 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Modelos/Categorias/Categorias.java</file>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Controlador/Categorias/ListaCategorias.java</file>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Vistas/Categorias/FrmRegistrarCategoria.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Productos/ListaProductos.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Inicio/Menu.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Productos/Productos.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Productos/FrmRegistrarProducto.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Categorias/FrmMostrarCategoria.java</file>
+            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Productos/FrmMostrarProducto.java</file>
+        </group>
+>>>>>>> 07e39ed34fb3ce7dff10209e9e7b5ec7cabdfc7c
     </open-files>
 </project-private>
