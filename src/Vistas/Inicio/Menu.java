@@ -1,6 +1,7 @@
 package Vistas.Inicio;
 
 import Controlador.Categorias.ListaCategorias;
+import Controlador.Empleados.ColaEmpleado;
 import Controlador.Productos.ListaProductos;
 import Controlador.Proveedores.ListaProveedores;
 import Vistas.Categorias.FrmMostrarCategoria;
@@ -25,6 +26,7 @@ public class Menu extends javax.swing.JFrame {
     ListaCategorias listaC = new ListaCategorias();
     ListaProveedores listaP = new ListaProveedores();
     ListaProductos listaProductos = new ListaProductos();
+    ColaEmpleado colaE = new ColaEmpleado();
     
     public Menu() {
         initComponents();
@@ -377,13 +379,13 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        FrmRegistroEmpleado empleado = new FrmRegistroEmpleado();
+        FrmRegistroEmpleado empleado = new FrmRegistroEmpleado(colaE);
         Menu.add(empleado);
         empleado.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        FrmMostrarEmpleado empleado = new FrmMostrarEmpleado();
+        FrmMostrarEmpleado empleado = new FrmMostrarEmpleado(colaE);
         Menu.add(empleado);
         empleado.show();
     }//GEN-LAST:event_jMenuItem2ActionPerformed

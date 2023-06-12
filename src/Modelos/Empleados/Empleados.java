@@ -8,7 +8,7 @@ package Modelos.Empleados;
 public class Empleados {
     private String nombreEmpleado, apellidoPaterno, apellidoMaterno, 
             usuarioEmpleado, contrasenaEmpleado;
-    private int ID;
+    public int ID;
 
     public Empleados(String nombreEmpleado, String apellidoPaterno, String apellidoMaterno, String usuarioEmpleado, String contrasenaEmpleado, int ID) {
         this.nombreEmpleado = nombreEmpleado;
