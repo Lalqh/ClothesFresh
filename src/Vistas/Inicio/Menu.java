@@ -421,7 +421,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        FrmMostrarProducto producto = new FrmMostrarProducto(listaProductos);
+        FrmMostrarProducto producto = new FrmMostrarProducto(listaProductos, listaC);
         Menu.add(producto);
         producto.show();
     }//GEN-LAST:event_jMenuItem6ActionPerformed

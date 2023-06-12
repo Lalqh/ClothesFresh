@@ -1,8 +1,5 @@
 
 package Vistas.Inicio;
-import java.awt.Image;
-import java.awt.Toolkit;
-import java.util.List;
 import javax.swing.ImageIcon;
 
 public class Login extends javax.swing.JFrame {

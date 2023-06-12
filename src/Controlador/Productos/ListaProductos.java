@@ -69,4 +69,64 @@ public class ListaProductos {
             tabla.setModel(mainTable);
         }
     }
+
+    public void eliminarNodo(int idProducto) {
+        if (lista == null) {
+            JOptionPane.showMessageDialog(null, "La lista de productos está vacía.");
+            return;
+        }
+        if (lista.getP().getId() == idProducto) {
+            lista = lista.getAptSiguiente();
+            JOptionPane.showMessageDialog(null, "Elemento eliminado.");
+            return;
+        }
+
+        NodoProductos aux = lista;
+        NodoProductos previo = null;
+
+        while (aux != null && aux.getP().getId() != idProducto) {
+            previo = aux;
+            aux = aux.getAptSiguiente();
+        }
+
+        if (aux == null) {
+            JOptionPane.showMessageDialog(null, "No se encontró del producto en la lista.");
+            return;
+        }
+        previo.setAptSiguiente(aux.getAptSiguiente());
+        JOptionPane.showMessageDialog(null, "Elemento eliminado.");
+    }
+
+    public Productos buscarNodo(int idProducto) {
+        NodoProductos aux = lista;
+        while (aux != null) {
+            if (aux.getP().getId() == idProducto) {
+                return aux.getP();
+            }
+            aux = aux.getAptSiguiente();
+        }
+
+        // Si no se encontró el elemento
+        return null;
+    }
+
+    public void editarNodo(int idCategoria, Productos productosActu) {
+        NodoProductos aux = lista;
+
+        while (aux != null) {
+            if (aux.getP().getId() == idCategoria) {
+                aux.getP().setNombreProducto(productosActu.getNombreProducto());
+                aux.getP().setDescripcion(productosActu.getDescripcion());
+                aux.getP().setTalla(productosActu.getTalla());
+                aux.getP().setStockProducto(productosActu.getStockProducto());
+                aux.getP().setPrecio(productosActu.getPrecio());
+                aux.getP().setCategoria(productosActu.getCategoria());
+                aux.getP().setTalla(productosActu.getTalla());
+                JOptionPane.showMessageDialog(null, "Elemento actualizado.");
+                return;
+            }
+            aux = aux.getAptSiguiente();
+        }
+        JOptionPane.showMessageDialog(null, "No se encontró del proucto en la lista.");
+    }
 }
