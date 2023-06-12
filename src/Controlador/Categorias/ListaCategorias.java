@@ -32,7 +32,7 @@ public class ListaCategorias {
                 aux = aux.getAptSiguiente();
             }
             aux.setAptSiguiente(nuevo);
-            JOptionPane.showMessageDialog(null, "Elemento agregado.");
+            
         }
     }
 

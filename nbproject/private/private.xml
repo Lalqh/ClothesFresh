@@ -2,29 +2,10 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
-        <group>
-            <file>file:/D:/PROYECTO/ClothesFresh/src/Modelos/Categorias/Categorias.java</file>
-            <file>file:/D:/PROYECTO/ClothesFresh/src/Controlador/Categorias/ListaCategorias.java</file>
-            <file>file:/D:/PROYECTO/ClothesFresh/src/Vistas/Categorias/FrmRegistrarCategoria.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Controlador/Productos/ListaProductos.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Inicio/Menu.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Modelos/Productos/Productos.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Productos/FrmRegistrarProducto.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Categorias/FrmMostrarCategoria.java</file>
-            <file>file:/C:/Users/laloh/OneDrive/Documentos/NetBeansProjects/ClothesFresh/src/Vistas/Productos/FrmMostrarProducto.java</file>
-        </group>
-<<<<<<< HEAD
         <group name="clases">
-            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Vistas/Inicio/Menu.java</file>
-            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Vistas/Empleados/FrmMostrarEmpleado.java</file>
-            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Vistas/Empleados/FrmRegistroEmpleado.java</file>
-            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Controlador/Empleados/ColaEmpleado.java</file>
+            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Controlador/Proveedores/ListaProveedores.java</file>
+            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Vistas/OrdenDeCompra/FrmEditarOrdenDeCompra.java</file>
+            <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Controlador/Categorias/ListaCategorias.java</file>
         </group>
-=======
->>>>>>> 07e39ed34fb3ce7dff10209e9e7b5ec7cabdfc7c
->>>>>>> 144ebad5bd986fb1a9f887bff62448b3c4bac571
     </open-files>
 </project-private>

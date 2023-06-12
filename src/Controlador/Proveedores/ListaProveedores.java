@@ -39,7 +39,7 @@ public class ListaProveedores {
                 aux = aux.getAptSiguiente();
             }
             aux.setAptSiguiente(nuevo);
-            JOptionPane.showMessageDialog(null, "Elemento agregado.");
+            
         }
     }
     
