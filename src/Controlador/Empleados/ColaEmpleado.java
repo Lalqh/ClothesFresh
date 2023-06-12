@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 public class ColaEmpleado {
 
     public NodoEmpleado cola;
-    public int auxCounter = 1;
+    public int auxCounter = 0;
 
     public ColaEmpleado() {
         cola = null;
