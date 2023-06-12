@@ -1,7 +1,7 @@
 package Controlador.Proveedores;
 
-import Controlador.Categorias.ListaCategorias;
-import Controlador.Categorias.NodoCategorias;
+
+
 import Controlador.Productos.NodoProductos;
 import Modelos.Productos.Productos;
 import Modelos.Proveedor.Proveedores;
@@ -12,12 +12,12 @@ import javax.swing.table.DefaultTableModel;
 
 public class ListaProveedores {
 
+  
     public NodoProveedor lista;
-    private int cantidadNodos;
+    public int auxCounter = 1;
 
     public ListaProveedores() {
         lista = null;
-        cantidadNodos = 0;
     }
 
     public NodoProveedor getLista() {
@@ -27,30 +27,7 @@ public class ListaProveedores {
     public void setLista(NodoProveedor lista) {
         this.lista = lista;
     }
-
-    public int getCantidadNodos() {
-        return cantidadNodos;
-    }
-
-    public void obtenerDatos(JTextField nombre, JTextField rfc, JTextField correo, JTextField id, JTextField noTelefono) {
-        String inputNombre = nombre.getText();
-        String inputRFC = rfc.getText();
-        String inputCorreo = correo.getText();
-        int inputID = Integer.parseInt(id.getText());
-        int inputNoTelefono = Integer.parseInt(noTelefono.getText());
-        
-        Proveedores proveedor = new Proveedores(inputNombre, inputRFC, inputCorreo, inputID, inputNoTelefono);
-        agregarNodo(proveedor);
-        cantidadNodos++;
-                
-        nombre.setText("");
-        rfc.setText("");
-        correo.setText("");
-        id.setText("");
-        noTelefono.setText("");
-        
-        nombre.requestFocus();
-    }
+    
     
     public void agregarNodo(Proveedores p) {
         NodoProveedor nuevo = new NodoProveedor(p);
@@ -66,10 +43,10 @@ public class ListaProveedores {
         }
     }
     
-    public void mostrarElementosCategoria(JTable tabla, ListaProveedores listaL) {
+    public void mostrarElementosProveedores(JTable tabla, ListaProveedores listaL) {
        NodoProveedor aux = listaL.lista; 
        if(listaL.lista == null) {
-           JOptionPane.showMessageDialog(null, "Lista de categorias vacia.");
+           JOptionPane.showMessageDialog(null, "Lista de proveedores vacia.");
        } else {
            DefaultTableModel mainTable = new DefaultTableModel();
            String cabecera[] = {"ID", "Nombre","RFC", "Correo","No. Telefono"};
@@ -90,4 +67,68 @@ public class ListaProveedores {
            tabla.setModel(mainTable);
        }
     }
+    
+    public void eliminarNodo(int idProveedor) {
+        if (lista == null) {
+            JOptionPane.showMessageDialog(null, "La lista de proveedores está vacía.");
+            return;
+        }
+        if (lista.getP().getIdProveedor()== idProveedor) {
+            lista = lista.getAptSiguiente();
+            JOptionPane.showMessageDialog(null, "Elemento eliminado.");
+            return;
+        }
+
+        NodoProveedor aux = lista;
+        NodoProveedor previo = null;
+
+        while (aux != null && aux.getP().getIdProveedor()!= idProveedor) {
+            previo = aux;
+            aux = aux.getAptSiguiente();
+        }
+
+        if (aux == null) {
+            JOptionPane.showMessageDialog(null, "No se encontró el proveedor en la lista.");
+            return;
+        }
+        previo.setAptSiguiente(aux.getAptSiguiente());
+        JOptionPane.showMessageDialog(null, "Elemento eliminado.");
+    }
+    
+    
+    public Proveedores buscarNodo(int idProveedor) {
+        NodoProveedor aux = lista;
+
+        while (aux != null) {
+            if (aux.getP().getIdProveedor()== idProveedor) {
+                return aux.getP();
+            }
+            aux = aux.getAptSiguiente();
+        }
+
+        // Si no se encontró el elemento
+        return null;
+    }
+    
+      public void editarNodo(int idProveedor, Proveedores ProveedorActualizado) {
+        NodoProveedor aux = lista;
+
+        while (aux != null) {
+            if (aux.getP().getIdProveedor()== idProveedor) {
+                aux.getP().setNombreProveedor(ProveedorActualizado.getNombreProveedor());
+                aux.getP().setRfcProveedor(ProveedorActualizado.getRfcProveedor());
+                aux.getP().setCorreoProveedor(ProveedorActualizado.getCorreoProveedor());
+                aux.getP().setNumeroProveedor(ProveedorActualizado.getNumeroProveedor());
+                
+                JOptionPane.showMessageDialog(null, "Elemento actualizado.");
+                return;
+            }
+            aux = aux.getAptSiguiente();
+        }
+        JOptionPane.showMessageDialog(null, "No se encontró el proveedor en la lista.");
+    }
+
+
+    
+    
 }

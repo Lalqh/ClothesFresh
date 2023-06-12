@@ -2,15 +2,15 @@
 package Modelos.Proveedor;
 
 public class Proveedores {
-    private int idProveedor, numeroProveedor;
-    private String nombreProveedor, rfcProveedor, correoProveedor;
+    public int idProveedor;
+    private String nombreProveedor, rfcProveedor, correoProveedor, numeroProveedor;
 
-    public Proveedores(String nombreProveedor, String rfcProveedor, String correoProveedor, int idProveedor, int numeroProveedor) {
+    public Proveedores(int idProveedor, String nombreProveedor, String rfcProveedor, String correoProveedor, String numeroProveedor) {
         this.idProveedor = idProveedor;
-        this.numeroProveedor = numeroProveedor;
         this.nombreProveedor = nombreProveedor;
         this.rfcProveedor = rfcProveedor;
         this.correoProveedor = correoProveedor;
+        this.numeroProveedor = numeroProveedor;
     }
 
     public int getIdProveedor() {
@@ -19,14 +19,6 @@ public class Proveedores {
 
     public void setIdProveedor(int idProveedor) {
         this.idProveedor = idProveedor;
-    }
-
-    public int getNumeroProveedor() {
-        return numeroProveedor;
-    }
-
-    public void setNumeroProveedor(int numeroProveedor) {
-        this.numeroProveedor = numeroProveedor;
     }
 
     public String getNombreProveedor() {
@@ -52,5 +44,15 @@ public class Proveedores {
     public void setCorreoProveedor(String correoProveedor) {
         this.correoProveedor = correoProveedor;
     }
- 
+
+    public String getNumeroProveedor() {
+        return numeroProveedor;
+    }
+
+    public void setNumeroProveedor(String numeroProveedor) {
+        this.numeroProveedor = numeroProveedor;
+    }
+   
+    
+     
 }

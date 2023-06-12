@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
+
 package Vistas.Categorias;
 
 import Controlador.Categorias.ListaCategorias;
 import Modelos.Categorias.Categorias;
 import javax.swing.JOptionPane;
-
-/**
- *
- * @author DELL
- */
 public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
     
     ListaCategorias lista;
@@ -19,7 +11,7 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
     public FrmRegistrarCategoria(ListaCategorias lista) {
         initComponents();
         this.lista = lista;
-        this.setTitle("Regitrar categoria");
+        this.setTitle("Registrar categoria");
     }
 
     @SuppressWarnings("unchecked")
@@ -222,6 +214,7 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
             cBDesactivar.setSelected(false);
             
             tFNombreCategoria.requestFocus();
+             JOptionPane.showMessageDialog(null, "Categoria agregada");
         }
         
     }//GEN-LAST:event_btnRegistrarActionPerformed

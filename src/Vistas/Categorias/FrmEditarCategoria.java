@@ -6,10 +6,6 @@ import javax.swing.JOptionPane;
 
 import Modelos.Categorias.Categorias;
 
-/**
- *
- * @author DELL
- */
 public class FrmEditarCategoria extends javax.swing.JInternalFrame {
     
    private ListaCategorias listaC;
