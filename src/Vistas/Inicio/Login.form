@@ -128,12 +128,16 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ingresar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Ingresar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIngresarActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTfUsuario">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese su usuario"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -144,6 +148,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="jTfContrasena">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese su contrase&#xf1;a"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnSalir">
           <Properties>
@@ -154,6 +161,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salir"/>
+            <Property name="toolTipText" type="java.lang.String" value="Salir"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>

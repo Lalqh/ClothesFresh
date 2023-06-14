@@ -157,6 +157,9 @@
         <Component class="javax.swing.JSeparator" name="jSeparator1">
         </Component>
         <Component class="javax.swing.JTextField" name="txCant">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Cantidad surtida"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -167,6 +170,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txFecha">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Fecha de compra"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txFechaActionPerformed"/>
           </Events>
@@ -180,6 +186,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txMonto">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Monto total"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -192,7 +201,11 @@
         <Component class="javax.swing.JCheckBox" name="jcEstado">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pagado"/>
+            <Property name="toolTipText" type="java.lang.String" value="Pagado"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcEstadoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -207,6 +220,7 @@
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="0"/>
             </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Proveedor"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -221,6 +235,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Registrar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -235,6 +250,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Regresar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Regresar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>

@@ -100,8 +100,6 @@ public class ListaCategorias {
             }
             aux = aux.getAptSiguiente();
         }
-
-        // Si no se encontró el elemento
         return null;
     }
 

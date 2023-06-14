@@ -51,18 +51,21 @@ public class ListaOrdenDeCompra {
         } else {
             DefaultTableModel mainTable = new DefaultTableModel();
             String cabecera[] = {"ID", "Cantidad Surtida", "Fecha de compra "
-                    , "Monto total", "Estado del pago", "Proveedor"};
+                    , "Monto total", "Estado", "Proveedor"};
             mainTable.setColumnIdentifiers(cabecera);
             tabla.setModel(mainTable);
 
             Object[] datosOrdenDeCompra = new Object[6];
 
             while (aux != null) {
+                
+                String mensaje = (aux.getO().isEstadoDePago()) ? "Activo" : "No Activo";
+                
                 datosOrdenDeCompra[0] = aux.getO().getIdOrdenCompra();
                 datosOrdenDeCompra[1] = aux.getO().getCantidadSurtida();
                 datosOrdenDeCompra[2] = aux.getO().getFechaDeCompra();
                 datosOrdenDeCompra[3] = aux.getO().getMontoTotal();
-                datosOrdenDeCompra[4] = aux.getO().isEstadoDePago();
+                datosOrdenDeCompra[4] = mensaje;
                 datosOrdenDeCompra[5] = aux.getO().getProvedor();
                 aux = aux.getAptSiguiente();
                 mainTable.addRow(datosOrdenDeCompra);

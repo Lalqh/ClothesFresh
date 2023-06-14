@@ -37,18 +37,24 @@ public class Login extends javax.swing.JFrame {
         btnIngresar.setBackground(new java.awt.Color(204, 255, 255));
         btnIngresar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnIngresar.setText("Ingresar");
+        btnIngresar.setToolTipText("Ingresar");
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
             }
         });
 
+        jTfUsuario.setToolTipText("Ingrese su usuario");
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Contraseña");
+
+        jTfContrasena.setToolTipText("Ingrese su contraseña");
 
         btnSalir.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir.setText("Salir");
+        btnSalir.setToolTipText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -129,7 +135,7 @@ public class Login extends javax.swing.JFrame {
 
     public void ingresar() {
         String usuario = "admin";
-        String contra = "clothesfresh";
+        String contra = "1234";
         
         String inputUsuario = jTfUsuario.getText();
         String inputPassword = jTfContrasena.getText();

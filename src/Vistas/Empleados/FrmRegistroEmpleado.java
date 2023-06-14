@@ -58,15 +58,22 @@ public class FrmRegistroEmpleado extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Nombre");
 
+        txNombre.setToolTipText("Ingrese su nombre");
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Apellido paterno");
+
+        txUser.setToolTipText("Ingrese usuario");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Apellido materno");
 
+        txapellidoP.setToolTipText("Ingrese su apellido paterno");
+
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setText("Usuario");
 
+        txapellidoM.setToolTipText("Ingrese su apellido materno");
         txapellidoM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txapellidoMActionPerformed(evt);
@@ -76,9 +83,12 @@ public class FrmRegistroEmpleado extends javax.swing.JInternalFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Contraseña");
 
+        txPassword.setToolTipText("Ingrese contraseña");
+
         btnRegistrar.setBackground(new java.awt.Color(204, 255, 255));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrar.setText("Registrar");
+        btnRegistrar.setToolTipText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -88,6 +98,7 @@ public class FrmRegistroEmpleado extends javax.swing.JInternalFrame {
         btnRegresar.setBackground(new java.awt.Color(255, 255, 204));
         btnRegresar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegresar.setText("Regresar");
+        btnRegresar.setToolTipText("Regresar");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
@@ -204,6 +215,7 @@ public class FrmRegistroEmpleado extends javax.swing.JInternalFrame {
             txPassword.setText("");
             
             txNombre.requestFocus();
+            JOptionPane.showMessageDialog(null, "Empleado agregado");
         }
        
     }//GEN-LAST:event_btnRegistrarActionPerformed

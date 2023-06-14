@@ -100,12 +100,17 @@ public class FrmEditarProducto extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Nombre del producto");
 
+        txtNombre.setToolTipText("Nombre de producto");
+
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Cantidad en stock");
+
+        txtStock.setToolTipText("Cantidad en stock");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel6.setText("Precio ");
 
+        txtPrecio.setToolTipText("Precio");
         txtPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPrecioActionPerformed(evt);
@@ -117,6 +122,7 @@ public class FrmEditarProducto extends javax.swing.JInternalFrame {
 
         buttonGroup1.add(btnChica);
         btnChica.setText("Chica");
+        btnChica.setToolTipText("Chica");
         btnChica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChicaActionPerformed(evt);
@@ -125,13 +131,16 @@ public class FrmEditarProducto extends javax.swing.JInternalFrame {
 
         buttonGroup1.add(btnMediana);
         btnMediana.setText("Mediana");
+        btnMediana.setToolTipText("Mediana");
 
         buttonGroup1.add(btnGrande);
         btnGrande.setText("Grande");
+        btnGrande.setToolTipText("Grande");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Categoria");
 
+        jcCategorias.setToolTipText("Categoria");
         jcCategorias.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcCategoriasActionPerformed(evt);
@@ -143,11 +152,13 @@ public class FrmEditarProducto extends javax.swing.JInternalFrame {
 
         txtDescripcion.setColumns(20);
         txtDescripcion.setRows(5);
+        txtDescripcion.setToolTipText("Descripcion");
         jScrollPane1.setViewportView(txtDescripcion);
 
         jButton2.setBackground(new java.awt.Color(204, 255, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Editar");
+        jButton2.setToolTipText("Editar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -157,6 +168,7 @@ public class FrmEditarProducto extends javax.swing.JInternalFrame {
         btnSalir1.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir1.setText("Regresar");
+        btnSalir1.setToolTipText("Regresar");
         btnSalir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalir1ActionPerformed(evt);

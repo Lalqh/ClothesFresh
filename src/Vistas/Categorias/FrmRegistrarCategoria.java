@@ -53,26 +53,39 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Nombre de categoria");
 
+        tFNombreCategoria.setToolTipText("Nombre de categoria");
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Descripcion");
 
         tADescripcion.setColumns(20);
         tADescripcion.setRows(5);
+        tADescripcion.setToolTipText("Descripcion de categoria");
         jScrollPane2.setViewportView(tADescripcion);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Estatus");
 
         cBActivar.setText("Activar");
+        cBActivar.setToolTipText("Activar");
+        cBActivar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cBActivarActionPerformed(evt);
+            }
+        });
 
         cBDesactivar.setText("Desactivar");
+        cBDesactivar.setToolTipText("Desactivar");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Fecha de registro");
 
+        tFechaRegistro.setToolTipText("Fecha de registro");
+
         btnRegistrar.setBackground(new java.awt.Color(204, 255, 255));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrar.setText("Registrar");
+        btnRegistrar.setToolTipText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -82,6 +95,7 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
         btnSalir.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir.setText("Regresar");
+        btnSalir.setToolTipText("Regresar");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
@@ -218,6 +232,10 @@ public class FrmRegistrarCategoria extends javax.swing.JInternalFrame {
         }
         
     }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void cBActivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBActivarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cBActivarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

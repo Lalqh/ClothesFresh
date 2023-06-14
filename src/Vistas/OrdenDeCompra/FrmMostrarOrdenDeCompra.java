@@ -67,6 +67,7 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         editar.setBackground(new java.awt.Color(204, 255, 255));
         editar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         editar.setText("Editar ");
+        editar.setToolTipText("Editar");
         editar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarActionPerformed(evt);
@@ -76,6 +77,7 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         actualizar.setBackground(new java.awt.Color(204, 255, 204));
         actualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         actualizar.setText("Actualizar datos");
+        actualizar.setToolTipText("Actualizar datos");
         actualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 actualizarActionPerformed(evt);
@@ -85,6 +87,7 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         eliminar.setBackground(new java.awt.Color(255, 255, 204));
         eliminar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         eliminar.setText("Eliminar");
+        eliminar.setToolTipText("Eliminar");
         eliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 eliminarActionPerformed(evt);
@@ -96,14 +99,11 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 466, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(editar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(actualizar)
@@ -157,6 +157,7 @@ public class FrmMostrarOrdenDeCompra extends javax.swing.JInternalFrame {
 
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
         listaO.mostrarElementosOrdenC(jTable1, listaO);
+        JOptionPane.showMessageDialog(null, "Elementos actualizados");
     }//GEN-LAST:event_actualizarActionPerformed
 
     private void eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarActionPerformed

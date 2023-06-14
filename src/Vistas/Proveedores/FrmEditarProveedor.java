@@ -57,18 +57,27 @@ private ListaProveedores listaP;
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Nombre");
 
+        Nombre.setToolTipText("Nombre");
+
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("RFC");
+
+        tfRFC.setToolTipText("RFC");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Correo");
 
+        tfCorreo.setToolTipText("Correo");
+
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("No. telefono");
+
+        tfNoTelefono.setToolTipText("No. telefono");
 
         btnRegistrar.setBackground(new java.awt.Color(204, 255, 255));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrar.setText("Editar");
+        btnRegistrar.setToolTipText("Editar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -78,6 +87,7 @@ private ListaProveedores listaP;
         btnSalir5.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir5.setText("Regresar");
+        btnSalir5.setToolTipText("Regresar");
         btnSalir5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalir5ActionPerformed(evt);

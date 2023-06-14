@@ -5,11 +5,13 @@ import Controlador.Empleados.ColaEmpleado;
 import Controlador.OrdenDeCompra.ListaOrdenDeCompra;
 import Controlador.Productos.ListaProductos;
 import Controlador.Proveedores.ListaProveedores;
+import Controlador.Ventas.ListaVentas;
 import Modelos.Categorias.Categorias;
 import Modelos.Empleados.Empleados;
 import Modelos.OrdenDeCompra.OrdenesDeCompra;
 import Modelos.Productos.Productos;
 import Modelos.Proveedor.Proveedores;
+import Modelos.Ventas.Ventas;
 import Vistas.Categorias.FrmMostrarCategoria;
 import Vistas.Categorias.FrmRegistrarCategoria;
 import Vistas.Empleados.FrmMostrarEmpleado;
@@ -25,6 +27,7 @@ import java.awt.Toolkit;
 import javax.swing.ImageIcon;
 import java.awt.Cursor;
 import java.awt.Point;
+import javax.swing.JOptionPane;
 
 public class Menu extends javax.swing.JFrame {
 
@@ -34,6 +37,7 @@ public class Menu extends javax.swing.JFrame {
     ListaProductos listaProductos = new ListaProductos();
     ListaOrdenDeCompra listaO = new ListaOrdenDeCompra();
     ColaEmpleado colaE = new ColaEmpleado();
+    ListaVentas listaV = new ListaVentas();
     
     public Menu(String usuario) {
         initComponents();
@@ -101,6 +105,12 @@ public class Menu extends javax.swing.JFrame {
         //Empleados
         colaE.encolar(new Empleados("Brayan", "Guardado", "Amezola", "BrayanClothes", "Brayan123", 1));
         colaE.encolar(new Empleados("Eduardo", "Cotero", "Avila", "LaloClothes", "Lalo123", 2));
+        
+        // Ventas
+        listaV.agregarNodo(new Ventas(1, "Playera" ,"Brayan", "13/06/2023", "Efectivo", 500));
+        listaV.agregarNodo(new Ventas(2, "Chaqueta" ,"Brayan", "13/06/2023", "Tarjeta", 1500));
+        
+        listaV.mostrarElementosVentas(jTable1, listaV);
     }
 
     @SuppressWarnings("unchecked")
@@ -181,10 +191,17 @@ public class Menu extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(204, 255, 255));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jButton2.setText("Actualizar datos");
+        jButton2.setToolTipText("Actualizar datos");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(255, 255, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
         jButton3.setText("Cerrar sesion");
+        jButton3.setToolTipText("Cerrar sesion");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -275,8 +292,10 @@ public class Menu extends javax.swing.JFrame {
 
         Empleados.setBackground(new java.awt.Color(255, 255, 204));
         Empleados.setText("Empleados");
+        Empleados.setToolTipText("");
 
         jMenuItem1.setText("Registrar");
+        jMenuItem1.setToolTipText("");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -285,6 +304,7 @@ public class Menu extends javax.swing.JFrame {
         Empleados.add(jMenuItem1);
 
         jMenuItem2.setText("Mostrar");
+        jMenuItem2.setToolTipText("");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -296,8 +316,10 @@ public class Menu extends javax.swing.JFrame {
 
         Categorias.setBackground(new java.awt.Color(255, 255, 204));
         Categorias.setText("Categorias");
+        Categorias.setToolTipText("");
 
         jMenuItem3.setText("Registrar");
+        jMenuItem3.setToolTipText("");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -306,6 +328,7 @@ public class Menu extends javax.swing.JFrame {
         Categorias.add(jMenuItem3);
 
         jMenuItem4.setText("Mostrar");
+        jMenuItem4.setToolTipText("");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -317,8 +340,10 @@ public class Menu extends javax.swing.JFrame {
 
         Productos.setBackground(new java.awt.Color(255, 255, 204));
         Productos.setText("Productos");
+        Productos.setToolTipText("");
 
         jMenuItem5.setText("Registrar");
+        jMenuItem5.setToolTipText("");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -327,6 +352,7 @@ public class Menu extends javax.swing.JFrame {
         Productos.add(jMenuItem5);
 
         jMenuItem6.setText("Mostrar");
+        jMenuItem6.setToolTipText("");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem6ActionPerformed(evt);
@@ -338,8 +364,10 @@ public class Menu extends javax.swing.JFrame {
 
         OrdenesdeCompra.setBackground(new java.awt.Color(255, 255, 204));
         OrdenesdeCompra.setText("Ordenes de compra");
+        OrdenesdeCompra.setToolTipText("");
 
         jMenuItem7.setText("Registrar");
+        jMenuItem7.setToolTipText("");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem7ActionPerformed(evt);
@@ -348,6 +376,7 @@ public class Menu extends javax.swing.JFrame {
         OrdenesdeCompra.add(jMenuItem7);
 
         jMenuItem8.setText("Mostrar");
+        jMenuItem8.setToolTipText("");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
@@ -359,8 +388,10 @@ public class Menu extends javax.swing.JFrame {
 
         Proveedores.setBackground(new java.awt.Color(255, 255, 204));
         Proveedores.setText("Proveedores");
+        Proveedores.setToolTipText("");
 
         jMenuItem9.setText("Registrar");
+        jMenuItem9.setToolTipText("");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem9ActionPerformed(evt);
@@ -369,6 +400,7 @@ public class Menu extends javax.swing.JFrame {
         Proveedores.add(jMenuItem9);
 
         jMenuItem10.setText("Mostrar");
+        jMenuItem10.setToolTipText("");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem10ActionPerformed(evt);
@@ -380,8 +412,10 @@ public class Menu extends javax.swing.JFrame {
 
         Ventas.setBackground(new java.awt.Color(255, 255, 204));
         Ventas.setText("Ventas");
+        Ventas.setToolTipText("");
 
         jMenuItem11.setText("Registrar");
+        jMenuItem11.setToolTipText("");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem11ActionPerformed(evt);
@@ -468,7 +502,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        FrmRegistrarVenta venta = new FrmRegistrarVenta();
+        FrmRegistrarVenta venta = new FrmRegistrarVenta(listaV, colaE, listaProductos);
         Menu.add(venta);
         venta.show();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
@@ -478,6 +512,11 @@ public class Menu extends javax.swing.JFrame {
         Login login = new Login();
         login.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     JOptionPane.showMessageDialog(null, "Elementos actualizados");
+     listaV.mostrarElementosVentas(jTable1, listaV);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
