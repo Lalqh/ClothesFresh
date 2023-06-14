@@ -142,6 +142,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfNombre">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Nombre "/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -152,6 +155,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfRFC">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="RFC"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -162,6 +168,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfCorreo">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Correo"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel12">
           <Properties>
@@ -172,6 +181,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="tfNoTelefono">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="No. telefono"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnRegistrar">
           <Properties>
@@ -182,6 +194,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Registrar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
@@ -196,6 +209,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Regresar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Regresar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>

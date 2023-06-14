@@ -127,6 +127,6 @@ public class ListaProductos {
             }
             aux = aux.getAptSiguiente();
         }
-        JOptionPane.showMessageDialog(null, "No se encontró del proucto en la lista.");
+        JOptionPane.showMessageDialog(null, "No se encontró el producto en la lista.");
     }
 }

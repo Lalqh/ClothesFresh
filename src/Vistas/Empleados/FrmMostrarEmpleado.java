@@ -134,7 +134,9 @@ public class FrmMostrarEmpleado extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+
         colaE.mostrarElementosEmpleado(jTableEmpleado, colaE);
+        JOptionPane.showMessageDialog(null, "Elementos actualizados");
     }//GEN-LAST:event_btnActualizarActionPerformed
 
 

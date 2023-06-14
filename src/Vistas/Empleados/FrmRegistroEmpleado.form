@@ -153,6 +153,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txNombre">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese su nombre"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -163,6 +166,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txUser">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese usuario"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -173,6 +179,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txapellidoP">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese su apellido paterno"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -183,6 +192,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txapellidoM">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese su apellido materno"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txapellidoMActionPerformed"/>
           </Events>
@@ -196,6 +208,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txPassword">
+          <Properties>
+            <Property name="toolTipText" type="java.lang.String" value="Ingrese contrase&#xf1;a"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnRegistrar">
           <Properties>
@@ -206,6 +221,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Registrar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Registrar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarActionPerformed"/>
@@ -220,6 +236,7 @@
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Regresar"/>
+            <Property name="toolTipText" type="java.lang.String" value="Regresar"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegresarActionPerformed"/>

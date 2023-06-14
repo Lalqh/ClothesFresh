@@ -69,6 +69,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
         jButton1.setBackground(new java.awt.Color(204, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Editar ");
+        jButton1.setToolTipText("Editar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -78,6 +79,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
         jButton2.setBackground(new java.awt.Color(255, 255, 204));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Eliminar");
+        jButton2.setToolTipText("Eliminar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -87,6 +89,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
         jButton3.setBackground(new java.awt.Color(204, 255, 204));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton3.setText("Actualizar datos");
+        jButton3.setToolTipText("Actualizar datos");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -152,7 +155,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el ID de la categoria a editar"));
+       int id = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresa el ID del producto a editar"));
         Productos productoActual = listaP.buscarNodo(id);
         
         FrmEditarProducto producto = new FrmEditarProducto(listaP, listac, productoActual.getId(), productoActual);
@@ -162,6 +165,7 @@ public class FrmMostrarProducto extends javax.swing.JInternalFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         listaP.mostrarElementosProductos(JTProductos, listaP);
+        JOptionPane.showMessageDialog(null, "Elementos actualizados");
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -47,18 +47,27 @@ public class FrmRegistrarProveedor extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel8.setText("Nombre");
 
+        tfNombre.setToolTipText("Nombre ");
+
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel9.setText("RFC");
+
+        tfRFC.setToolTipText("RFC");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setText("Correo");
 
+        tfCorreo.setToolTipText("Correo");
+
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("No. telefono");
+
+        tfNoTelefono.setToolTipText("No. telefono");
 
         btnRegistrar.setBackground(new java.awt.Color(204, 255, 255));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrar.setText("Registrar");
+        btnRegistrar.setToolTipText("Registrar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -68,6 +77,7 @@ public class FrmRegistrarProveedor extends javax.swing.JInternalFrame {
         jButton4.setBackground(new java.awt.Color(255, 255, 204));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton4.setText("Regresar");
+        jButton4.setToolTipText("Regresar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);

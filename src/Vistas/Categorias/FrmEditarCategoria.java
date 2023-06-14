@@ -60,26 +60,34 @@ public class FrmEditarCategoria extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setText("Nombre de categoria");
 
+        tFNombreCategoria.setToolTipText("Nombre de categoria");
+
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setText("Descripcion");
 
         tADescripcion.setColumns(20);
         tADescripcion.setRows(5);
+        tADescripcion.setToolTipText("Descripcion de categoria");
         jScrollPane2.setViewportView(tADescripcion);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("Estatus");
 
         cBActivar.setText("Activar");
+        cBActivar.setToolTipText("Activar");
 
         cBDesactivar.setText("Desactivar");
+        cBDesactivar.setToolTipText("Desactivar");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Fecha de registro");
 
+        tFechaRegistro.setToolTipText("Fecha de registro");
+
         btnRegistrar.setBackground(new java.awt.Color(204, 255, 255));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnRegistrar.setText("Editar");
+        btnRegistrar.setToolTipText("Editar");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -89,6 +97,7 @@ public class FrmEditarCategoria extends javax.swing.JInternalFrame {
         btnSalir.setBackground(new java.awt.Color(255, 255, 204));
         btnSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnSalir.setText("Regresar");
+        btnSalir.setToolTipText("Regresar");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
