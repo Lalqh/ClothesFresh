@@ -14,6 +14,14 @@ public class ColaEmpleado {
         cola = null;
     }
 
+    public NodoEmpleado getCola() {
+        return cola;
+    }
+
+    public void setCola(NodoEmpleado cola) {
+        this.cola = cola;
+    }
+
     public void encolar(Empleados e) {
         NodoEmpleado nuevo = new NodoEmpleado(e);
         if (cola == null) {

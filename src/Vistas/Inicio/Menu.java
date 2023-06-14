@@ -5,11 +5,13 @@ import Controlador.Empleados.ColaEmpleado;
 import Controlador.OrdenDeCompra.ListaOrdenDeCompra;
 import Controlador.Productos.ListaProductos;
 import Controlador.Proveedores.ListaProveedores;
+import Controlador.Ventas.ListaVentas;
 import Modelos.Categorias.Categorias;
 import Modelos.Empleados.Empleados;
 import Modelos.OrdenDeCompra.OrdenesDeCompra;
 import Modelos.Productos.Productos;
 import Modelos.Proveedor.Proveedores;
+import Modelos.Ventas.Ventas;
 import Vistas.Categorias.FrmMostrarCategoria;
 import Vistas.Categorias.FrmRegistrarCategoria;
 import Vistas.Empleados.FrmMostrarEmpleado;
@@ -35,6 +37,7 @@ public class Menu extends javax.swing.JFrame {
     ListaProductos listaProductos = new ListaProductos();
     ListaOrdenDeCompra listaO = new ListaOrdenDeCompra();
     ColaEmpleado colaE = new ColaEmpleado();
+    ListaVentas listaV = new ListaVentas();
     
     public Menu(String usuario) {
         initComponents();
@@ -102,6 +105,12 @@ public class Menu extends javax.swing.JFrame {
         //Empleados
         colaE.encolar(new Empleados("Brayan", "Guardado", "Amezola", "BrayanClothes", "Brayan123", 1));
         colaE.encolar(new Empleados("Eduardo", "Cotero", "Avila", "LaloClothes", "Lalo123", 2));
+        
+        // Ventas
+        listaV.agregarNodo(new Ventas(1, "Playera" ,"Brayan", "13/06/2023", "Efectivo", 500));
+        listaV.agregarNodo(new Ventas(2, "Chaqueta" ,"Brayan", "13/06/2023", "Tarjeta", 1500));
+        
+        listaV.mostrarElementosVentas(jTable1, listaV);
     }
 
     @SuppressWarnings("unchecked")
@@ -493,7 +502,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        FrmRegistrarVenta venta = new FrmRegistrarVenta();
+        FrmRegistrarVenta venta = new FrmRegistrarVenta(listaV, colaE, listaProductos);
         Menu.add(venta);
         venta.show();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
@@ -506,6 +515,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
      JOptionPane.showMessageDialog(null, "Elementos actualizados");
+     listaV.mostrarElementosVentas(jTable1, listaV);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 

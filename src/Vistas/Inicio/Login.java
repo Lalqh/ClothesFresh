@@ -135,7 +135,7 @@ public class Login extends javax.swing.JFrame {
 
     public void ingresar() {
         String usuario = "admin";
-        String contra = "clothesfresh";
+        String contra = "1234";
         
         String inputUsuario = jTfUsuario.getText();
         String inputPassword = jTfContrasena.getText();
