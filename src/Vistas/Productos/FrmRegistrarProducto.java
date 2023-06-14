@@ -259,35 +259,36 @@ public class FrmRegistrarProducto extends javax.swing.JInternalFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String inputNombreProducto = txtNombre.getText();
         String inputDescripcion = txtDescripcion.getText();
-        String inputStcok = txtStock.getText();
-        String inputPrecio = txtPrecio.getText();
+        String stock = txtStock.getText();
+        String precio = txtPrecio.getText();
         String inputCategoria = (String) jcCategorias.getSelectedItem();
         String inputTalla = "";
-        
-        int stock = Integer.parseInt(inputStcok);
-        float precio = Float.parseFloat(inputPrecio);
 
         if (btnChica.isSelected()) {
             inputTalla = "Chica";
-        }
-        else if (btnMediana.isSelected()) {
+        } else if (btnMediana.isSelected()) {
             inputTalla = "Mediana";
-        }
-        else if (btnGrande.isSelected()) {
+        } else if (btnGrande.isSelected()) {
             inputTalla = "Grande";
         }
 
-        if (inputNombreProducto.equalsIgnoreCase("") || inputStcok.equals("") || inputPrecio.equals("") || inputDescripcion.equals("")) {
-            JOptionPane.showMessageDialog(null, "Todos los campos deben ser llenados");
+        if (inputNombreProducto.equals("") || txtStock.getText().equals("") || txtPrecio.getText().equals("") || inputDescripcion.equals("") 
+                && !btnChica.isSelected() && !btnMediana.isSelected() && !btnGrande.isSelected()) {
+            JOptionPane.showMessageDialog(null, "Todos los campos deben ser llenados\n ó \n debes seleccionar una talla.");
         } else {
-            Productos p = new Productos(stock, listaP.auxCounter, precio, inputNombreProducto, inputDescripcion, inputTalla, inputCategoria);
+            int inputStcok = Integer.parseInt(stock);
+            float inputPrecio = Float.parseFloat(precio);
+            Productos p = new Productos(inputStcok, listaP.auxCounter, inputPrecio, inputNombreProducto, inputDescripcion, inputTalla, inputCategoria);
             listaP.agregarNodo(p);
+            
             listaP.auxCounter++;
+            
             txtNombre.setText("");
             txtDescripcion.setText("");
             txtStock.setText("");
             txtPrecio.setText("");
             buttonGroup1.clearSelection();
+            
             txtNombre.requestFocus();
         }
     }//GEN-LAST:event_jButton2ActionPerformed

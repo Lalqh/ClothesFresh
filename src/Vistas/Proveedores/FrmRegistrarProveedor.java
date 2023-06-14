@@ -161,7 +161,7 @@ public class FrmRegistrarProveedor extends javax.swing.JInternalFrame {
       String inputCorreoProveedor = tfCorreo.getText();
       String inputNomTelefono = tfNoTelefono.getText();
      
-       if(inputNombreProveedor.equalsIgnoreCase("") || inputRfcProveedor.equals("") || inputCorreoProveedor.equals("") || inputNomTelefono.equals("")) {
+       if(inputNombreProveedor.equals("") || inputRfcProveedor.equals("") || inputCorreoProveedor.equals("") || inputNomTelefono.equals("")) {
             JOptionPane.showMessageDialog(null,"Todos los campos deben ser llenados");
         } else {
             Proveedores proveedor = new Proveedores(lista.auxCounter, inputNombreProveedor, inputRfcProveedor, inputCorreoProveedor, inputNomTelefono);

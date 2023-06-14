@@ -7,6 +7,10 @@
             <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Vistas/OrdenDeCompra/FrmEditarOrdenDeCompra.java</file>
             <file>file:/C:/Users/Axel%20Flores/Documents/NetBeansProjects/ClothesFresh/src/Controlador/Categorias/ListaCategorias.java</file>
         </group>
-        <group/>
+        <group>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Vistas/Inicio/Login.java</file>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Vistas/Productos/FrmRegistrarProducto.java</file>
+            <file>file:/D:/PROYECTO/ClothesFresh/src/Vistas/Inicio/Menu.java</file>
+        </group>
     </open-files>
 </project-private>
